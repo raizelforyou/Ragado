@@ -47,23 +47,23 @@ export function Footer() {
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-  className="bg-[#0F112A] text-white px-6 md:px-12 pt-20 pb-16 rounded-t-[50px] mt-24"
+  className="bg-[#0F112A] text-white px-6 md:px-12 pt-12 pb-10 rounded-t-[30px] mt-4"
 >
-      <div className="max-w-7xl mx-auto space-y-14">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Section 1: Links */}
-          <div className="flex flex-col gap-3">
-            <SnakeLink href="#" className="text-[22px] text-white font-normal">
+          <div className="flex flex-col gap-1">
+            <SnakeLink href="#" className="text-[15px] text-white font-normal">
               Privacy Policy
             </SnakeLink>
-            <SnakeLink href="#" className="text-[22px] text-white font-normal">
+            <SnakeLink href="#" className="text-[15px] text-white font-normal">
               Terms of Service
             </SnakeLink>
           </div>
 
           {/* Section 2: Email Support */}
           <div className="md:text-right">
-            <SnakeLink href="mailto:support@ragadobrokers.com" className="text-[22px] text-white font-normal">
+            <SnakeLink href="mailto:support@ragadobrokers.com" className="text-[15px] text-white font-normal">
               support@ragadobrokers.com
             </SnakeLink>
           </div>
@@ -71,13 +71,13 @@ export function Footer() {
 
         {/* Section 3: Regulatory Info */}
         <div className="space-y-16">
-          <p className="text-[16px] text-white font-normal leading-relaxed max-w-4xl">
+          <p className="text-[12px] text-white font-normal leading-relaxed max-w-4xl mt-10">
             Authorised and regulated by the Financial Conduct Authority registration number 1034795
           </p>
 
           {/* Bottom Bar: Copyright */}
-          <div className="pt-8 border-t border-white/5 flex justify-between items-center">
-            <p className="text-[18px] text-white/60 font-medium">
+          <div className="pt-8 border-t mt-10 border-white/5 flex justify-between items-center">
+            <p className="text-[14px] text-white/60 font-medium">
               &copy; 2026 Ragado. All rights reserved.
             </p>
           </div>

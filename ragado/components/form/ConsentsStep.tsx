@@ -24,7 +24,7 @@ export function ConsentsStep() {
         <h1 className="text-xl font-semibold text-foreground mb-1">Consents</h1>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div className="flex items-start gap-3">
           <Checkbox
             id="fca-register-check"
@@ -32,11 +32,11 @@ export function ConsentsStep() {
             onCheckedChange={(checked) =>
               handleConsentChange('fcaRegisterCheck', checked as boolean)
             }
-            className="mt-1"
+            className="mt-1 bg-gray-100"
           />
           <label
             htmlFor="fca-register-check"
-            className="text-sm font-medium text-foreground cursor-pointer leading-relaxed"
+            className="text-sm font-medium text-gray-500 cursor-pointer leading-relaxed"
           >
             I consent to Ragado checking the FCA Register and Companies House
             in connection with this application
@@ -50,11 +50,11 @@ export function ConsentsStep() {
             onCheckedChange={(checked) =>
               handleConsentChange('accurateInformation', checked as boolean)
             }
-            className="mt-1"
+            className="mt-1 bg-gray-100"
           />
           <label
             htmlFor="accurate-information"
-            className="text-sm font-medium text-foreground cursor-pointer leading-relaxed"
+            className="text-sm font-medium text-gray-500 cursor-pointer leading-relaxed"
           >
             I declare that all information provided in this application is
             accurate and complete to the best of my knowledge
@@ -68,11 +68,11 @@ export function ConsentsStep() {
             onCheckedChange={(checked) =>
               handleConsentChange('materialChange', checked as boolean)
             }
-            className="mt-1"
+            className="mt-1 bg-gray-100"
           />
           <label
             htmlFor="material-change"
-            className="text-sm font-medium text-foreground cursor-pointer leading-relaxed"
+            className="text-sm font-medium text-gray-500 cursor-pointer leading-relaxed"
           >
             I agree to notify Ragado immediately of any material change to the
             firm's regulatory status
@@ -86,11 +86,11 @@ export function ConsentsStep() {
             onCheckedChange={(checked) =>
               handleConsentChange('preliminaryAccess', checked as boolean)
             }
-            className="mt-1"
+            className="mt-1 bg-gray-100"
           />
           <label
             htmlFor="preliminary-access"
-            className="text-sm font-medium text-foreground cursor-pointer leading-relaxed"
+            className="text-sm font-medium text-gray-500 cursor-pointer leading-relaxed"
           >
             I accept the preliminary access review terms
           </label>

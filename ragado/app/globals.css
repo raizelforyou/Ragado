@@ -114,6 +114,10 @@
 }
 
 @layer base {
+    html {
+    font-size: 14px;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -128,7 +132,7 @@
     @apply border-b border-t-0 border-l-0 border-r-0 rounded-none px-2 py-3 transition-all outline-none bg-transparent;
 
     &:focus {
-      @apply border-b-transparent bg-[#F3F4F6];
+      @apply border-b-transparent bg-[#FAFAFA] ;
     }
   }
 }

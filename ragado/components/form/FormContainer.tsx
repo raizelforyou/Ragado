@@ -186,7 +186,7 @@ export function FormContainer() {
             </div>
 
             {/* Desktop breadcrumb (>= md) — always show all */}
-            <div className="hidden md:flex items-center whitespace-nowrap overflow-x-auto scrollbar-hide pb-2 text-base mb-10 no-scrollbar">
+            <div className="hidden md:flex items-center whitespace-nowrap overflow-x-auto scrollbar-hide text-base no-scrollbar">
               {allCrumbs.map((crumb, i) => (
                 <div key={crumb.stepIndex} className="flex items-center">
                   {isCurrentCrumb(i) ? (
@@ -219,7 +219,7 @@ export function FormContainer() {
         <Button
           onClick={handlePrevious}
           disabled={isFirstStep}
-          className="group inline-flex items-center gap-3 bg-[#e6eaf5] text-[#1e293b] hover:bg-[#d8def0] px-5 py-6 rounded-xl text-base font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-none shadow-none"
+          className="group inline-flex items-center gap-3 bg-[#e4e6f3] text-[#0f112a] hover:bg-[#0f112a] px-5 py-6 rounded-xl text-base font-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-none shadow-none"
         >
           <span>Previous</span>
           <div className="flex items-center justify-center w-7 h-7 bg-[#0f172a] rounded-lg ml-1">
@@ -245,10 +245,6 @@ export function FormContainer() {
         </Button>
       </div>
 
-      {/* Step Indicator */}
-      <div className="mt-12 text-center text-sm text-muted-foreground opacity-50">
-        Step {currentStep + 1} of {STEPS.length}
-      </div>
     </div>
   )
 }

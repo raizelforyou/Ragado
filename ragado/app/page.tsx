@@ -28,8 +28,8 @@ export default function Page() {
   // Show form when in steps 0-4
   if (currentStep >= 0 && currentStep < STEP_COUNT) {
     return (
-      <main className="min-h-screen bg-background">
-        <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
+      <main className="min-h-screen bg-[#FAFAFA] ">
+        <div className="max-w-4xl mx-auto px-4 py-12 md:py-20">
           <FormContainer />
         </div>
       </main>

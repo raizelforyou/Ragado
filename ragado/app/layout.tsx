@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} font-sans antialiased min-h-screen flex flex-col bg-white`}>
+      <body className={`${inter.className} font-sans-serif antialiased min-h-screen flex flex-col bg-[#FAFAFA] `}>
         <FormProvider>
           <Header />
           <main className="flex-1">

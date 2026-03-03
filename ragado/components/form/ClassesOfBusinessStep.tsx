@@ -28,7 +28,7 @@ export function ClassesOfBusinessStep() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <div>
         <h1 className="text-xl font-semibold text-foreground mb-1">
           Classes of Business
@@ -48,7 +48,7 @@ export function ClassesOfBusinessStep() {
                 />
                 <label
                   htmlFor={businessClass}
-                  className="text-sm font-medium text-foreground cursor-pointer"
+                  className="text-sm font-medium  text-gray-500 cursor-pointer"
                 >
                   {businessClass}
                 </label>
@@ -57,24 +57,24 @@ export function ClassesOfBusinessStep() {
           </div>
         </div>
 
-        <div className="border-t pt-6">
+        <div className="pt-6">
           <Input
             type="text"
             placeholder="Estimated GWP (£)"
             value={formData.estimatedGWP}
             onChange={(e) => updateFormData({ estimatedGWP: e.target.value })}
-            className="border-0 border-b shadow-none rounded-none px-2 focus-visible:border-b-[#0F112A] focus-visible:bg-[#F3F4F6] h-auto py-3 transition-all bg-transparent"
+            className="border-0 border-b border-black shadow-none rounded-none px-2 focus-visible:border-b-[#0F112A] focus-visible:bg-[#F3F4F6] h-auto py-3 transition-all bg-transparent"
           />
         </div>
 
-        <div>
+        <div className='pt-6'>
           <Textarea
             placeholder="Additional Information"
             value={formData.additionalInformation}
             onChange={(e) =>
               updateFormData({ additionalInformation: e.target.value })
             }
-            className="border-0 border-b shadow-none rounded-none px-2 focus-visible:border-b-[#0F112A] focus-visible:bg-[#F3F4F6] resize-none min-h-24 transition-all bg-transparent py-3"
+            className="border-0 border-b border-black shadow-none rounded-none px-2 focus-visible:border-b-[#0F112A] focus-visible:bg-[#F3F4F6] resize-none min-h-10 transition-all bg-transparent py-5"
             rows={4}
           />
         </div>
