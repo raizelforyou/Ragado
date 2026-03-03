@@ -218,30 +218,92 @@ export function FormContainer() {
       <div className="flex items-center justify-between gap-4 mt-6 pt-4">
         <Button
           onClick={handlePrevious}
-          disabled={isFirstStep}
-          className="group inline-flex items-center gap-3 bg-[#e4e6f3] text-[#0f112a] hover:bg-[#0f112a] px-5 py-6 rounded-xl text-base font-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-none shadow-none"
+          className="group inline-flex items-center gap-3 
+             bg-[#c1c1c24b] text-[#0F112A]  
+             px-4 py-6 rounded-lg 
+             text-base font-medium 
+             transition-all duration-300 
+             hover:bg-[#0F112A] hover:text-white
+             disabled:cursor-not-allowed"
         >
           <span>Previous</span>
-          <div className="flex items-center justify-center w-7 h-7 bg-[#0f172a] rounded-lg ml-1">
-            <LeftArrowSquare className="w-20 h-20 text-white" />
-          </div>
+          <div className="relative overflow-hidden flex items-center justify-center w-6 h-6 bg-black rounded-sm transition-transform group-hover:bg-white focus:ring-0">
+                        {/* First Arrow */}
+                <span
+                  className="
+                    absolute
+                    transition-all duration-300
+                    ease-in-out
+                    group-hover:translate-x-6
+                  "
+                >
+                  <ArrowLeft className="text-white w-4 h-4" />
+                </span>
+          
+                {/* Second Arrow */}
+                <span
+                  className="
+                    absolute
+                    -translate-x-6
+                    transition-all duration-300
+                    ease-in-out
+                    group-hover:translate-x-0
+                  "
+                >
+                  <ArrowLeft className="text-black w-4 h-4" />
+                </span>
+                </div>
         </Button>
 
         <Button
           onClick={handleNext}
           disabled={isSubmitting}
-          className="group inline-flex items-center gap-3 bg-white border border-[#e2e8f0] text-[#1e293b] hover:bg-gray-50 px-6 py-6 rounded-xl text-base font-medium transition-all duration-200 border-none shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+          className="group inline-flex items-center gap-3 
+             bg-white text-[#0F112A]  
+            border border-gray-300
+             px-4 py-6 rounded-lg 
+             text-base font-medium 
+             transition-all duration-300 
+             hover:bg-[#0F112A] hover:text-white
+             disabled:cursor-not-allowed"
+             >
           <span className="pl-1">
             {isSubmitting ? 'Submitting...' : isLastStep ? 'Submit' : 'Next'}
           </span>
-          <div className="flex items-center justify-center w-7 h-7 bg-[#0f172a] rounded-lg ml-2">
-            {isSubmitting ? (
-              <Loader2 className="w-4 h-4 text-white animate-spin" />
-            ) : (
-              <RightArrowSquare className="w-20 h-20 text-white" />
-            )}
-          </div>
+            {/* Arrow Container */}
+  <div className="relative overflow-hidden flex items-center justify-center w-6 h-6 bg-black rounded-sm transition-transform group-hover:bg-white ">
+    
+    {isSubmitting ? (
+      <Loader2 className="w-4 h-4 animate-spin" />
+    ) : (
+      <>
+        {/* First Arrow */}
+        <span
+                  className="
+                    absolute
+                    transition-all duration-300
+                    ease-in-out
+                    group-hover:translate-x-6
+                  "
+                >
+                  <ArrowRight className="text-white w-4 h-4" />
+                </span>
+          
+                {/* Second Arrow */}
+                <span
+                  className="
+                    absolute
+                    -translate-x-6
+                    transition-all duration-300
+                    ease-in-out
+                    group-hover:translate-x-0
+                  "
+                >
+                  <ArrowRight className="text-black w-4 h-4" />
+                </span>
+      </>
+    )}
+  </div>
         </Button>
       </div>
 
